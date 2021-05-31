@@ -34,6 +34,6 @@ class StringMatcher
 
   def check_errors
     errors << I18n.t 'errors.missing_records' unless records.any?
-    error << I18n.t 'data_type' unless records.is_a?(Array)
+    error << I18n.t 'errors.data_type' unless records.is_a?(Array)
   end
 end

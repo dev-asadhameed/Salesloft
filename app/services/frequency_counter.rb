@@ -36,7 +36,7 @@ class FrequencyCounter
 
   def check_errors
     errors << I18n.t 'errors.missing_records' unless records.any?
-    error << I18n.t 'data_type' unless records.is_a?(Array)
-    errors << I18n.t 'order_type' unless ALLOWED_ORDERS.include?(order)
+    error << I18n.t 'errors.data_type' unless records.is_a?(Array)
+    errors << I18n.t 'errors.order_type' unless ALLOWED_ORDERS.include?(order)
   end
 end
