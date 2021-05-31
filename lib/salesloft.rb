@@ -5,11 +5,9 @@ require 'httparty'
 module Salesloft
   class << self
     def get_people
-      response = HTTParty.get("#{ENV['SALESLOFT_API_URL']}/#{ENV['SALESLOFT_API_VERSION']}/#{SALESLOFT_GET_PEOPLE_PATH}",
+      HTTParty.get("#{ENV['SALESLOFT_API_URL']}/#{ENV['SALESLOFT_API_VERSION']}/#{SALESLOFT_GET_PEOPLE_PATH}",
                               headers: default_headers)
-                          .parsed_response
-
-      response
+              .parsed_response
     end
 
     private
