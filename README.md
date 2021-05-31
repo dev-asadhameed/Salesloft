@@ -1,24 +1,19 @@
-# README
+# SalesLoft API Integration
+This is a simple rails api designed according to the requirements provided.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation Guide
+This project can be run natively.
 
-Things you may want to cover:
+## Requirements
+- Ruby 2.7.1
 
-* Ruby version
+#### Native Ruby Setup
+1. Install Ruby using the version found in the .ruby-version file using a Ruby/language version manager.
+2. Install Gem dependencies:
+   * `bundle`
 
-* System dependencies
+#### Native Application Launch
 
-* Configuration
+`bundle exec rails server`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To use the UI, set up the frontend app.

@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    missing_records: 'Records are missing.'
+    data_type: 'Wrong Data type.'
+    order_type: 'Order type is not allowed.'
