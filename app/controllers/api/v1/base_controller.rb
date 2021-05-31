@@ -5,11 +5,7 @@ module Api
     class BaseController < ApplicationController
       include ExceptionHandler
 
-      before_action :params_required, only: %i[show create]
-
       protected
-
-      def params_required; end
 
       def order_params
         params.permit(:order_by, :order)

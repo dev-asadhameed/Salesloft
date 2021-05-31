@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FrequencyCount
+class FrequencyCounter
   attr_reader :records, :order, :errors, :frequency_counts
 
   def initialize(records, order = 'none')
