@@ -13,7 +13,7 @@ class FrequencyCounter
   end
 
   def generate
-    return 'Something went wrong.' if errors.any?
+    return errors.to_sentence if errors.any?
 
     @frequency_counts = records.reduce(:+)&.each_char&.tally
     return frequency_counts if order == 'none'
@@ -37,6 +37,6 @@ class FrequencyCounter
   def check_errors
     errors << 'Records are missing.' unless records.any?
     error << 'Wrong Data type.' unless records.is_a?(Array)
-    errors << 'Order by type is not allowed.' unless ALLOWED_ORDERS.include?(order)
+    errors << 'Order type is not allowed.' unless ALLOWED_ORDERS.include?(order)
   end
 end

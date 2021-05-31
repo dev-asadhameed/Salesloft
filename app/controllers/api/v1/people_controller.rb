@@ -17,6 +17,16 @@ module Api
         end
       end
 
+      def matched_records
+        string_matcher = StringMatcher.new(email_addresses)
+
+        if string_matcher.errors.any?
+          render json: { errors: string_matcher.errors.to_sentence }, status: :bad_request
+        else
+          render json: { matched_strings: string_matcher.generate }
+        end
+      end
+
       private
 
       def people_list
